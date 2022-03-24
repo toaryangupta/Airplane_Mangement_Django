@@ -1,0 +1,80 @@
+<div class="sidenav">
+  <a href="/">Home</a>
+
+  <button class="dropdown-btn">Insert
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+
+    <a href="{% url 'createAirplaneModelForm' %}">Airplane Models</a>
+    <a href=" {% url 'createAirplaneForm' %}">Airplane Registration</a>
+    <a href="{% url 'createEmployeeForm' %}">Employee Registraiton</a>
+    <a href="{% url 'createVariousTestsForm' %}">Various Test Types</a>
+    <a href="{% url 'createExpertiseForm' %}">Expertise Linking</a>
+    <a href="{% url 'createMedicalTrafficControllerForm' %}">Medical Details- Traffic Controller</a>
+    <a href="{% url 'createTestRecordForm' %}">Test Record Form</a>
+  </div>
+
+  <button class="dropdown-btn">Display
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="{% url 'displayAirplaneModel' %}">Airplane Models</a>
+    <a href=" {% url 'displayAirplane' %}">Airplane Registration</a>
+    <a href="{% url 'displayEmployee' %}">Employee Registraiton</a>
+    <a href="{% url 'displayVariousTests' %}">Various Test Types</a>
+    <a href="{% url 'displayExpertise' %}">Expertise Linking</a>
+    <a href="{% url 'displayMedicalTrafficController' %}">Medical Details- Traffic Controller</a>
+    <a href="{% url 'displayTestRecord' %}">Test Record Form</a>
+  </div>
+
+  <button class="dropdown-btn">Update
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="/update/AirplaneModel">Airplane Models</a>
+    <a href="/update/Airplane">Registered Airplanes</a>
+    <a href="/update/Employee">Employees</a>
+    <a href="/update/VariousTests">Various Test Types</a>
+    <a href="/update/Expertise">Expertise</a>
+    <a href="/update/MedicalTrafficController">Medical Details- Traffic Controller</a>
+    <a href="/update/TestRecord">Test Records</a>
+  </div>
+
+  <button class="dropdown-btn">Delete
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="/delete/AirplaneModel">Airplane Models</a>
+    <a href="/delete/Airplane">Registered Airplanes</a>
+    <a href="/delete/Employee">Employees</a>
+    <a href="/delete/VariousTests">Various Test Types</a>
+    <a href="/delete/Expertise">Expertise</a>
+    <a href="/delete/MedicalTrafficController">Medical Details- Traffic Controller</a>
+    <a href="/delete/TestRecord">Test Records</a>
+  </div>
+</div>
+
+
+
+
+
+
+
+<script>
+  /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+  var dropdown = document.getElementsByClassName("dropdown-btn");
+  var i;
+
+  for (i = 0; i < dropdown.length; i++) {
+    dropdown[i].addEventListener("click", function () {
+      this.classList.toggle("active");
+      var dropdownContent = this.nextElementSibling;
+      if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+      } else {
+        dropdownContent.style.display = "block";
+      }
+    });
+  }
+</script>

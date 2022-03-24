@@ -1,0 +1,17 @@
+{% extends 'main/update.html' %} 
+
+
+{% block tableRows %}
+
+<td>{{data.model_no}}</td>
+<td>{{data.company}}</td>
+<td>{{ data.manufacturer}}</td>
+<td>{{ data.capacity}}</td>
+<td>{{ data.weight}}</td>
+<td>
+ <form action="{% url 'do_updateAirplaneModel' data.model_no %}">
+         <button class="myButton button1">Update</button>
+ </form>
+
+
+{% endblock tableRows %}

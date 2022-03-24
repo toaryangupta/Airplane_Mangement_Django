@@ -1,0 +1,18 @@
+{% extends 'main/delete.html' %} 
+
+
+{% block tableRows %}
+
+<td>{{data.expertiseid}}</td>
+<td>{{data.model_no}}</td>
+<td>{{data.membership_no}}</td>
+<td>
+ <form action="{% url 'do_deleteExpertise' data.expertiseid%}">
+         <button class="myButton button1">Delete</button>
+ </form>
+ 
+</td>
+
+
+
+{% endblock tableRows %}

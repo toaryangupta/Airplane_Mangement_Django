@@ -1,0 +1,20 @@
+{% extends 'main/delete.html' %} 
+
+
+{% block tableRows %}
+
+
+<td>{{data.faa_number}}</td>
+<td>{{data.test_name}}</td>
+<td>
+ <form action="{% url 'do_deleteVariousTests' data.faa_number   %}">
+         <button class="myButton button1">Delete</button>
+ </form>
+ 
+</td>
+
+
+
+
+
+{% endblock tableRows %}

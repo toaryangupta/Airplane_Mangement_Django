@@ -1,0 +1,18 @@
+{% extends 'main/update.html' %} 
+
+{% block tableRows %}
+
+<td>{{data.membership_no}}</td>
+<td>{{data.salary}}</td>
+<td>{{ data.phone_no}}</td>
+<td>{{ data.address}}</td>
+<td>{{ data.first_name}}</td>
+<td>{{ data.last_name}}</td>
+<td>{{ data.role}}</td>
+<td>
+ <form action="{% url 'do_updateEmployee' data.membership_no %}">
+         <button class="myButton button1">Update</button>
+ </form>
+
+
+{% endblock tableRows %}

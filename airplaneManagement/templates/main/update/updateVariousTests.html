@@ -1,0 +1,17 @@
+{% extends 'main/update.html' %} 
+
+
+{% block tableRows %}
+
+
+<td>{{data.faa_number}}</td>
+<td>{{data.test_name}}</td>
+<td>
+ <form action="{% url 'do_updateVariousTests' data.faa_number %}">
+         <button class="myButton button1">Update</button>
+ </form>
+
+
+
+
+{% endblock tableRows %}

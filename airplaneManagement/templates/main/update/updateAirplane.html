@@ -1,0 +1,13 @@
+{% extends 'main/update.html' %} {% block tableRows %}
+
+<td>{{data.reg_no}}</td>
+<td>{{data.model_no}}</td>
+<td>
+ <form action="{% url 'do_updateAirplane' data.reg_no %}">
+         <button class="myButton button1">Update</button>
+ </form>
+ 
+</td>
+
+{% endblock tableRows %}
+

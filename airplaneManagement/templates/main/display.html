@@ -1,0 +1,43 @@
+{% extends 'main/base.html' %}
+
+{% block title %}{{title}}{% endblock title %}
+
+{% block content %}
+
+<div class="container" id="tableDiv">
+<table class="styled-table">
+<caption>{{caption}}</caption>
+    <thead>
+  
+        <tr>
+        {% for data in capitalisedFields %}
+       
+            <th>{{data}}</th>
+        {% endfor %}
+        
+        </tr>
+    </thead>
+   <tbody> 
+    {%for data in ourtable%}
+     
+        <tr>
+               
+                {% block tableRows %} 
+                
+                {% endblock tableRows %}
+              
+
+           
+        </tr>
+  
+    {% endfor %}
+       
+      </tbody>
+</table>
+</div>
+
+
+
+
+
+{% endblock content %}

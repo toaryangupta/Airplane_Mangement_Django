@@ -1,0 +1,29 @@
+ {% extends 'main/base.html' %}
+ 
+{% block aboveHtml %} {% load crispy_forms_tags %} {% endblock aboveHtml %}
+
+ {% block title %}{{title}} {% endblock %}
+ {% block style %}  
+ 
+ 
+ {% endblock style %}
+ {% block content %}
+ 
+ <div class='container' id="formDiv" >
+ 
+  <h3 class="text-center"> {{formHeading}} </h3>
+
+  <form method="POST" action="">
+    {% csrf_token %}
+    {% comment %} {{form.as_p}} {% endcomment %}
+   {{ form|crispy }}
+
+   <br>
+    
+    <button id="submitButton" type="submit" name="save" class="myButton button1"   >{{buttonDetail}}</button>
+    
+    <p><br></p>
+
+</div>
+  
+{% endblock content %}
